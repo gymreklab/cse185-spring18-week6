@@ -90,7 +90,7 @@ So, starting with 1958, we can calculate all possible shifts for the y and b ser
 |Y|1795.944471|1777.933971|
 |W|1772.928487|1754.917987|
 
-Take a look at the `.mgf` file to see if you have peaks corresponding to any of these masses. Looking at the tail (e.g. `tail -n 30 example_peptide.mgf`) you'll notice a peak around ~1813. That is close to the expected peak for lysine (K) in the b-series! So we can guess that the last amino acid in our peptide is K. For the y-series, we actually should have gotten a peak at ~1845, since the first amino acid in our peptide is I (you already have 2/18 figured out!). That peak isn't in our data though... (biology is messy!).
+Take a look at the `.mgf` file to see if you have peaks corresponding to any of these masses. Looking at the tail (e.g. `tail -n 30 example_peptide.mgf`) you'll notice a peak around ~1813. That is close to the expected peak for lysine (K) in the b-series! So we can guess that the last amino acid in our peptide is K (which makes sense, this peptide resulted from trypsinization, which results in peptides ending in "K" or "R"). For the y-series, we actually should have gotten a peak at ~1845, since the first amino acid in our peptide is I (you already have 2/18 figured out!). That peak isn't in our data though... (biology is messy!).
 
 So we can already start to fill out our table:
 
@@ -144,9 +144,9 @@ Your goal in this section is to manually reconstruct as much of the sequence as 
 * You could also try to first identify the major peaks, then calculate all shifts of nearby peaks to figure out what amino acids those shifts correspond to.
 
 Try to construct as much as you can. You may work with a partner. One of you might want to work from left to right and the other from right to left to go through the peaks and identify likely next amino acids. Fill in the table above as you go. 
-Don't spend too much time trying to get all right but focus on understanding. You can compare directly as directed below in #11.Spend at most ~45 minutes on this so you have time for the rest.
+Fill in as much as you can, focusing on understanding the method. Spend at most ~45 minutes on this so you have time for the rest. **Hint, if you get stuck, the true sequence is given in part 11 below. But try to reconstruct some of the sequence yourself first.**
 
-**Include your table in your worksheet. Explain your answer for at least two more amino acids.**
+**Include your table in your worksheet (with at least 2 more amino acids filled in). Explain your answer for at least two more amino acids.**
  
 **This was pretty tedious! If you were going to write a program to automate this process, how would you do it? (max 2-3 sentences about your idea.**
 
@@ -179,4 +179,4 @@ The original sequence of the peptide is actually IAGIIKVIKSLIEQFTGK. Go to this 
 
 When you've completed the worksheet, make sure your repository is up to date on Github (by doing `git push`). This is due at 11am next Tuesday.
 
-***Acknowledgement: This lab was conceived by Jeramie Watrous.***
+***Acknowledgement: Jeramie Watrous conceived of this assignment and provided MS data.***
